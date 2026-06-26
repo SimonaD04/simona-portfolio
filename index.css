@@ -1048,7 +1048,7 @@ footer {
 
 @media (max-width: 768px) {
   nav {
-    padding: 1.5rem;
+    padding: 1rem;
     background: #f7f6f2; 
   }
   .nav-burger {
@@ -1068,6 +1068,29 @@ footer {
   align-items: center;
   gap: 3rem;
   z-index: 100;
+}
+  nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-logo {
+        position: relative;
+        z-index: 1002;
+    }
+
+    .nav-logo img {
+    height: 65px;
+}
+    .nav-burger {
+        position: relative;
+        z-index: 1002;
+    }
+
+    .nav-links {
+        z-index: 1000;
+    }
 }
 
 .nav-links.open {
@@ -1111,8 +1134,13 @@ footer {
     margin: 0 1.5rem;
   }
   #works {
-    padding: 5rem 1.5rem;
+    padding: 5rem 0;
   }
+
+  .project-list {
+    padding: 3rem 0;
+  }
+}
   .works-grid {
     display: flex;
     flex-direction: column;
