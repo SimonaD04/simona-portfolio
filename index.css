@@ -1135,11 +1135,6 @@ footer {
   }
   #works {
     padding: 5rem 0;
-  }
-
-  .project-list {
-    padding: 3rem 0;
-  }
 }
   .works-grid {
     display: flex;
