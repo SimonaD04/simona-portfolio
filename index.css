@@ -1118,7 +1118,7 @@ footer {
   }
   #about {
     grid-template-columns: 1fr;
-    
+    padding: 4rem 0 3rem;
   }
   .about-image-col {
     border-right: none;
@@ -1149,7 +1149,9 @@ footer {
     top: auto;
     width: 100%;
   }
-  
+  #services {
+    padding: 5rem 1.5rem;
+  }
   .services-header {
     flex-direction: column;
     align-items: flex-start;
