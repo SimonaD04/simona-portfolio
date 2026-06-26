@@ -1086,9 +1086,6 @@ footer {
   .hero-subtitle {
     padding: 1.5rem 1.5rem 2rem;
   }
-  .hero-me{
-    height: 50vh;
-  }
   .hero-year {
     display: none;
   }
@@ -1114,10 +1111,6 @@ footer {
   }
   #works {
     padding: 5rem 0;
-  }
-
-  .project-list {
-    padding: 3rem 0;
   }
 
   .works-grid {
