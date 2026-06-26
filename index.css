@@ -1054,7 +1054,9 @@ footer {
   .nav-burger {
   display: flex;
 }
-
+.nav-logo img {
+    height: 65px;
+}
 .nav-links {
   display: none;
   position: fixed;
@@ -1111,8 +1113,13 @@ footer {
     margin: 0 1.5rem;
   }
   #works {
-    padding: 5rem 1.5rem;
+    padding: 5rem 0;
   }
+
+  .project-list {
+    padding: 3rem 0;
+  }
+
   .works-grid {
     display: flex;
     flex-direction: column;
