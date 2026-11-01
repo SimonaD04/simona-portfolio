@@ -7,10 +7,9 @@
 }
  :root {
     --bg: #f8f7f4;
-    --anthracite: #292a27;
+    --anthracite: #1F2326;
     --yellow: #c6ac8f;
 
-    /* Existing variable names kept as aliases so the original layout keeps working */
     --text: var(--anthracite);
     --muted: var(--anthracite);
     --accent: var(--yellow);
@@ -112,7 +111,7 @@ h1,h2,h3,
   display: block;
   width: 24px;
   height: 1.5px;
-  background: #292a27;
+  background: var(--anthracite);
   transition: transform 0.3s, opacity 0.3s;
 }
 
@@ -328,7 +327,7 @@ nav .nav-burger span {
 .hero-subtitle,
 .hero-year,
 .hero-marquee-item{
-    color:#f8f7f4;
+    color: var(--bg);
 }
 .hero-year {
   position: absolute;
@@ -417,7 +416,7 @@ nav .nav-burger span {
   
     font-weight:400;
   font-style: italic;
-  color: #f8f7f4;
+  color: var(--bg);
   font-weight: 300;
 }
 
@@ -434,15 +433,16 @@ nav .nav-burger span {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  border-top: 1px solid rgba(41, 42, 39, 0.14);
+  border-top: 1px solid var(--anthracite);
   padding-top: 2.5rem;
 }
 
 .stat-number {
   font-size: 2.5rem;
   font-weight: 300;
-  color: #f8f7f4;
+  color: var(--bg);
   line-height: 1;
+  
 }
 
 .stat-label {
@@ -517,7 +517,7 @@ nav .nav-burger span {
     font-weight:300;
     margin-bottom:1rem;
 }
-.project h2 a{color:black; text-decoration: none;}
+.project h2 a{color: var(--antracite) ; text-decoration: none;}
 .project p{
     color:var(--muted);
     line-height:1.8;
@@ -559,7 +559,7 @@ nav .nav-burger span {
 
 .instagram-btn:hover {
     background: #c6ac8f;
-    color: #f8f7f4;
+    color: var(--bg);
 }
 
 /* Prilagođavanje za mobilne telefone */
@@ -603,7 +603,7 @@ nav .nav-burger span {
 }
 .services-title em {
   font-style: italic;
-  color: #f8f7f4;
+  color: var(--bg);
   font-weight: 300;
 }
 
@@ -627,7 +627,7 @@ nav .nav-burger span {
   background: #292a27;
   padding: 4rem;
   text-decoration: none;
-  color: #f8f7f4;
+  color: var(--bg);
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
@@ -639,7 +639,7 @@ nav .nav-burger span {
   content: "";
   position: absolute;
   inset: 0;
-  background: #f8f7f4;
+  background: var(--bg);
   transform: translateY(100%);
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 0;
@@ -651,10 +651,10 @@ nav .nav-burger span {
 .service-card:hover .service-name,
 .service-card:hover .service-desc,
 .service-card:hover .service-link {
-  color: #292a27;
+  color: var(--anthracite);
 }
 .service-card:hover .service-link-line {
-  background: #292a27;
+  background: var(--anthracite);
   width: 50px;
 }
 .service-card > * {
@@ -698,14 +698,14 @@ nav .nav-burger span {
   font-size: 0.65rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #292a27;
+  color: var(--anthracite);
   transition: color 0.4s;
 }
 
 .service-link-line {
   width: 30px;
   height: 1px;
-  background: #292a27;
+  background: var(--anthracite);
   transition: width 0.4s, background 0.4s;
 }
 
@@ -714,7 +714,7 @@ nav .nav-burger span {
   font-size: 1rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: #c6ac8f;
+  color: var(--accent);
   margin-bottom: 2rem;
 }
 
@@ -725,7 +725,7 @@ nav .nav-burger span {
 }
 .contact-heading em {
   font-style: italic;
-  color: #c6ac8f;
+  color: var(--accent);
   font-weight: 300;
 
 }
@@ -737,7 +737,7 @@ nav .nav-burger span {
 }
 
 .contact-item {
-  border-bottom: 1px solid rgba(41, 42, 39, 0.14);
+  border-bottom: 1px solid var(--anthracite);
   padding-bottom: 2rem;
 }
 
@@ -752,11 +752,11 @@ nav .nav-burger span {
 .contact-item-value {
   font-size: 1.4rem;
   font-weight: 300;
-  color: #292a27;
+  color: var(--anthracite);
 }
 
 footer {
-  border-top: 1px solid rgba(41, 42, 39, 0.14);
+  border-top: 1px solid var(--anthracite);
   margin: 0 3rem;
   padding: 2.5rem 0;
   display: flex;
@@ -854,7 +854,7 @@ footer {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: #c6ac8f; /* Boja linija burgera (prilagodi svojoj) */
+    background-color: #c6ac8f; 
     transition: all 0.3s ease;
     transform-origin: left center;
 }
@@ -892,7 +892,7 @@ footer {
         right: -100%; /* Inicijalno je sklonjen skroz desno van ekrana */
         width: 100%;
         height: 100vh;
-        background-color: #f8f7f4; /* Tvoja tačna boja pozadine, bez providnosti */
+        background-color: var(--bg); /* Tvoja tačna boja pozadine, bez providnosti */
     opacity: 1;
         display: flex;
         flex-direction: column;
@@ -909,14 +909,14 @@ footer {
     /* Kad JS doda klasu .open, meni uklizava na ekran */
     .nav-links.open {
         right: 0;
-        background-color: #f8f7f4; 
+        background-color: var(--bg); 
     }
 
     /* Stilovi za linkove unutar mobilnog menija */
     .nav-links li a {
         font-size: 2rem; /* Velika, elegantna slova na mobilnom */
         text-decoration: none;
-        color: #c6ac8f;
+        color: var(--accent);
         transition: opacity 0.3s ease;
     }
 
@@ -1050,7 +1050,7 @@ footer {
 @media (max-width: 768px) {
   nav {
     padding: 1.5rem;
-    background: #f8f7f4; 
+    background: var(--bg); 
   }
   .nav-burger {
   display: flex;
@@ -1099,7 +1099,7 @@ footer {
   }
   .about-image-col {
     border-right: none;
-    border-bottom: 1px solid rgba(41, 42, 39, 0.14);
+    border-bottom: 1px solid var(--anthracite);
     min-height: 50vw;
     padding: 3rem 1.5rem;
     grid-template-columns: 1fr;
@@ -1208,8 +1208,8 @@ h1, h2, h3,
 
 /* Footer — restrained dark closing section */
 footer {
-    background: #292a27;
-    border-top: 1px solid rgba(41, 42, 39, 0.14);
+    background: var(--anthracite);
+    border-top: 1px solid var(--anthracite);
     margin: 0;
     padding: 2.5rem 5rem;
     display: flex;
@@ -1316,14 +1316,14 @@ footer {
 /* Light footer, matching the original light background */
 footer {
     background: var(--bg);
-    border-top: 1px solid rgba(41, 42, 39, 0.14);
+    border-top: 1px solid var(--anthracite);
     margin: 0 3rem;
     padding: 2.5rem 0;
 }
 
 .footer-copy,
 .footer-made {
-    color: #c6ac8f;
+    color: var(--accent);
     font-family: "Poppins", sans-serif;
     font-size: 0.7rem;
     font-weight: 300;
@@ -1339,10 +1339,6 @@ footer {
 }
 
 
-/* =====================================
-   FINAL POLISH — THREE-COLOUR PALETTE
-   Keeps the original logo/nav colour inversion behaviour intact.
-===================================== */
 
 :root {
     --bg: #f8f7f4;
@@ -1351,7 +1347,7 @@ footer {
     --text: var(--anthracite);
     --muted: var(--anthracite);
     --accent: var(--yellow);
-    --line: rgba(41, 42, 39, 0.14);
+    --line: var(--anthracite);
 }
 
 body {
@@ -1369,16 +1365,16 @@ body {
     color: var(--anthracite);
 }
 .section-divider, .about-stats, .contact-item, footer {
-    border-color: rgba(41, 42, 39, 0.14);
+    border-color: var(--line);
 }
 .section-label, .services-section-label, .contact-tag,
 .hero-eyebrow, .hero-subtitle, .hero-year, .hero-scroll,
 .stat-label, .service-number, .service-name, .service-desc,
 .services-desc, .footer-copy, .footer-made, .category-hero span {
-    color: var(--yellow);
+    color: var(--accent);
 }
 .about-heading, .services-title, .contact-heading {
-    color: var(--yellow);
+    color: var(--accent);
 }
 .about-heading em, .services-title em, .contact-heading em {
     color: var(--bg);
@@ -1416,7 +1412,7 @@ body {
 #contact .contact-tag {
     display: block;
     margin: 0 0 3rem;
-    color: var(--yellow);
+    color: var(--accent);
     font-family: "Poppins", sans-serif;
     font-size: 1rem;
     font-weight: 400;
@@ -1431,7 +1427,7 @@ footer {
     border-top: 1px solid var(--line);
 }
 .footer-copy, .footer-made {
-    color: var(--yellow);
+    color: var(--accent);
 }
 
 @media (max-width: 768px) {
