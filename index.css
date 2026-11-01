@@ -5,12 +5,16 @@
   margin: 0;
   padding: 0;
 }
-:root{
-    --bg:#f8f7f4;
-    --text:#151515;
-    --muted:#767676;
-    --accent:#8c7357;
-    --line:rgba(0,0,0,.08);
+ :root {
+    --bg: #f8f7f4;
+    --anthracite: #292a27;
+    --yellow: #c6ac8f;
+
+    /* Existing variable names kept as aliases so the original layout keeps working */
+    --text: var(--anthracite);
+    --muted: var(--anthracite);
+    --accent: var(--yellow);
+    --line: rgba(41, 42, 39, 0.14);
 }
 
 html {
@@ -108,7 +112,7 @@ h1,h2,h3,
   display: block;
   width: 24px;
   height: 1.5px;
-  background: #0a0908;
+  background: #292a27;
   transition: transform 0.3s, opacity 0.3s;
 }
 
@@ -240,7 +244,7 @@ nav .nav-burger span {
   font-size: 1.5rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #5e503f;
+  color: #c6ac8f;
   margin-bottom: 1.5rem;
   opacity: 0;
   animation: fadeUp 1s 0.4s forwards;
@@ -249,8 +253,8 @@ nav .nav-burger span {
 .hero-marquee-wrap {
   width: 100%;
   overflow: hidden;
-  border-top: 1px solid rgba(26, 24, 20, 0.12);
-  border-bottom: 1px solid rgba(26, 24, 20, 0.12);
+  border-top: 1px solid rgba(41, 42, 39, 0.14);
+  border-bottom: 1px solid rgba(41, 42, 39, 0.14);
   padding: 0.4rem 0;
   opacity: 0;
   animation: fadeIn 1s 0.3s forwards;
@@ -270,7 +274,7 @@ nav .nav-burger span {
   font-weight:400;
   line-height:.9;
   letter-spacing: -0.01em;
-  color: #0a0908;
+  color: #292a27;
   padding-right: 0.5em;
   flex-shrink: 0;
   -webkit-user-select: none;
@@ -279,7 +283,7 @@ nav .nav-burger span {
 }
 .hero-marquee-item em {
   font-style: italic;
-  color: #5e503f;
+  color: #c6ac8f;
   font-weight: 200;
 }
 
@@ -287,7 +291,7 @@ nav .nav-burger span {
   font-size: 0.65rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #5e503f;
+  color: #c6ac8f;
   opacity: 0;
   animation: fadeUp 1s 0.6s forwards;
   padding: 2rem 3rem 2.5rem;
@@ -324,7 +328,7 @@ nav .nav-burger span {
 .hero-subtitle,
 .hero-year,
 .hero-marquee-item{
-    color:#fff;
+    color:#f8f7f4;
 }
 .hero-year {
   position: absolute;
@@ -340,7 +344,7 @@ nav .nav-burger span {
 
 .section-divider {
   height: 1px;
-  background: rgba(26, 24, 20, 0.12);
+  background: rgba(41, 42, 39, 0.14);
   margin: 0 3rem;
 }
 
@@ -394,7 +398,7 @@ nav .nav-burger span {
   font-size: 1rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: #5e503f;
+  color: #c6ac8f;
   margin-bottom: 3rem;
   display: flex;
   align-items: center;
@@ -407,13 +411,13 @@ nav .nav-burger span {
   line-height: 1.1;
   margin-bottom: 2.5rem;
   text-align: left;
-  color: #5e503f;
+  color: #c6ac8f;
 }
 .about-heading em {
   
     font-weight:400;
   font-style: italic;
-  color: #eae0d5;
+  color: #f8f7f4;
   font-weight: 300;
 }
 
@@ -430,14 +434,14 @@ nav .nav-burger span {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  border-top: 1px solid rgba(26, 24, 20, 0.12);
+  border-top: 1px solid rgba(41, 42, 39, 0.14);
   padding-top: 2.5rem;
 }
 
 .stat-number {
   font-size: 2.5rem;
   font-weight: 300;
-  color: #eae0d5;
+  color: #f8f7f4;
   line-height: 1;
 }
 
@@ -543,8 +547,8 @@ nav .nav-burger span {
     display: block;
     text-align: center;
     padding: 1.2rem 2rem;
-    border: 1px solid #86735f;
-    color: #86735f;
+    border: 1px solid #c6ac8f;
+    color: #c6ac8f;
     text-decoration: none;
     font-size: 0.9rem;
     letter-spacing: 0.15em;
@@ -554,8 +558,8 @@ nav .nav-burger span {
 }
 
 .instagram-btn:hover {
-    background: #86735f;
-    color: #f7f6f2;
+    background: #c6ac8f;
+    color: #f8f7f4;
 }
 
 /* Prilagođavanje za mobilne telefone */
@@ -580,7 +584,7 @@ nav .nav-burger span {
 
 }
 #services {
-  background-color: #0a0908;
+  background-color: #292a27;
   padding: 8rem 3rem;
 }
 
@@ -592,14 +596,14 @@ nav .nav-burger span {
 }
 
 .services-title {
-  color: #5e503f;
+  color: #c6ac8f;
   font-size: clamp(2.5rem, 5vw, 5rem);
   font-weight: 500;
   line-height: 1;
 }
 .services-title em {
   font-style: italic;
-  color: #eae0d5;
+  color: #f8f7f4;
   font-weight: 300;
 }
 
@@ -615,15 +619,15 @@ nav .nav-burger span {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1px;
-  background: rgba(26, 24, 20, 0.12);
-  border: 1px solid rgba(26, 24, 20, 0.12);
+  background: rgba(41, 42, 39, 0.14);
+  border: 1px solid rgba(41, 42, 39, 0.14);
 }
 
 .service-card {
-  background: #0a0908;
+  background: #292a27;
   padding: 4rem;
   text-decoration: none;
-  color: #f7f6f2;
+  color: #f8f7f4;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
@@ -635,7 +639,7 @@ nav .nav-burger span {
   content: "";
   position: absolute;
   inset: 0;
-  background: #f7f6f2;
+  background: #f8f7f4;
   transform: translateY(100%);
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 0;
@@ -647,10 +651,10 @@ nav .nav-burger span {
 .service-card:hover .service-name,
 .service-card:hover .service-desc,
 .service-card:hover .service-link {
-  color: #0a0908;
+  color: #292a27;
 }
 .service-card:hover .service-link-line {
-  background: #0a0908;
+  background: #292a27;
   width: 50px;
 }
 .service-card > * {
@@ -694,14 +698,14 @@ nav .nav-burger span {
   font-size: 0.65rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #0a0908;
+  color: #292a27;
   transition: color 0.4s;
 }
 
 .service-link-line {
   width: 30px;
   height: 1px;
-  background: #0a0908;
+  background: #292a27;
   transition: width 0.4s, background 0.4s;
 }
 
@@ -710,7 +714,7 @@ nav .nav-burger span {
   font-size: 1rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: #5e503f;
+  color: #c6ac8f;
   margin-bottom: 2rem;
 }
 
@@ -721,7 +725,7 @@ nav .nav-burger span {
 }
 .contact-heading em {
   font-style: italic;
-  color: #5e503f;
+  color: #c6ac8f;
   font-weight: 300;
 
 }
@@ -733,7 +737,7 @@ nav .nav-burger span {
 }
 
 .contact-item {
-  border-bottom: 1px solid rgba(26, 24, 20, 0.12);
+  border-bottom: 1px solid rgba(41, 42, 39, 0.14);
   padding-bottom: 2rem;
 }
 
@@ -748,11 +752,11 @@ nav .nav-burger span {
 .contact-item-value {
   font-size: 1.4rem;
   font-weight: 300;
-  color: #0a0908;
+  color: #292a27;
 }
 
 footer {
-  border-top: 1px solid rgba(26, 24, 20, 0.12);
+  border-top: 1px solid rgba(41, 42, 39, 0.14);
   margin: 0 3rem;
   padding: 2.5rem 0;
   display: flex;
@@ -850,7 +854,7 @@ footer {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: #86735f; /* Boja linija burgera (prilagodi svojoj) */
+    background-color: #c6ac8f; /* Boja linija burgera (prilagodi svojoj) */
     transition: all 0.3s ease;
     transform-origin: left center;
 }
@@ -888,7 +892,7 @@ footer {
         right: -100%; /* Inicijalno je sklonjen skroz desno van ekrana */
         width: 100%;
         height: 100vh;
-        background-color: #f7f6f2; /* Tvoja tačna boja pozadine, bez providnosti */
+        background-color: #f8f7f4; /* Tvoja tačna boja pozadine, bez providnosti */
     opacity: 1;
         display: flex;
         flex-direction: column;
@@ -905,14 +909,14 @@ footer {
     /* Kad JS doda klasu .open, meni uklizava na ekran */
     .nav-links.open {
         right: 0;
-        background-color: #f7f6f2; 
+        background-color: #f8f7f4; 
     }
 
     /* Stilovi za linkove unutar mobilnog menija */
     .nav-links li a {
         font-size: 2rem; /* Velika, elegantna slova na mobilnom */
         text-decoration: none;
-        color: #86735f;
+        color: #c6ac8f;
         transition: opacity 0.3s ease;
     }
 
@@ -1046,7 +1050,7 @@ footer {
 @media (max-width: 768px) {
   nav {
     padding: 1.5rem;
-    background: #f7f6f2; 
+    background: #f8f7f4; 
   }
   .nav-burger {
   display: flex;
@@ -1061,7 +1065,7 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #eae0d5;
+  background: #f8f7f4;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -1095,7 +1099,7 @@ footer {
   }
   .about-image-col {
     border-right: none;
-    border-bottom: 1px solid rgba(26, 24, 20, 0.12);
+    border-bottom: 1px solid rgba(41, 42, 39, 0.14);
     min-height: 50vw;
     padding: 3rem 1.5rem;
     grid-template-columns: 1fr;
@@ -1204,8 +1208,8 @@ h1, h2, h3,
 
 /* Footer — restrained dark closing section */
 footer {
-    background: #0a0908;
-    border-top: 1px solid rgba(234, 224, 213, 0.2);
+    background: #292a27;
+    border-top: 1px solid rgba(41, 42, 39, 0.14);
     margin: 0;
     padding: 2.5rem 5rem;
     display: flex;
@@ -1227,7 +1231,7 @@ footer {
     font-family: "Playfair Display", serif;
     font-size: 1rem;
     font-style: italic;
-    color: #eae0d5;
+    color: #f8f7f4;
 }
 
 @media (max-width: 768px) {
@@ -1250,7 +1254,7 @@ footer {
     z-index: 3;
     width: 100%;
     padding: 0 3rem;
-    color: #fff;
+    color: #f8f7f4;
     font-family: "Playfair Display", serif;
     font-size: clamp(2.5rem, 6vw, 6rem);
     font-weight: 400;
@@ -1312,14 +1316,14 @@ footer {
 /* Light footer, matching the original light background */
 footer {
     background: var(--bg);
-    border-top: 1px solid rgba(26, 24, 20, 0.12);
+    border-top: 1px solid rgba(41, 42, 39, 0.14);
     margin: 0 3rem;
     padding: 2.5rem 0;
 }
 
 .footer-copy,
 .footer-made {
-    color: #8c7357;
+    color: #c6ac8f;
     font-family: "Poppins", sans-serif;
     font-size: 0.7rem;
     font-weight: 300;
@@ -1331,5 +1335,119 @@ footer {
     footer {
         margin: 0 1.5rem;
         padding: 2rem 0;
+    }
+}
+
+
+/* =====================================
+   FINAL POLISH — THREE-COLOUR PALETTE
+   Keeps the original logo/nav colour inversion behaviour intact.
+===================================== */
+
+:root {
+    --bg: #f8f7f4;
+    --anthracite: #292a27;
+    --yellow: #c6ac8f;
+    --text: var(--anthracite);
+    --muted: var(--anthracite);
+    --accent: var(--yellow);
+    --line: rgba(41, 42, 39, 0.14);
+}
+
+body {
+    background: var(--bg);
+    color: var(--anthracite);
+}
+
+/* Dark sections use the same anthracite, not a separate black. */
+#about, #services, .service-card {
+    background-color: var(--anthracite);
+}
+
+/* Main text and borders use the same three palette colours. */
+.project, .project h2 a, .contact-item-value {
+    color: var(--anthracite);
+}
+.section-divider, .about-stats, .contact-item, footer {
+    border-color: rgba(41, 42, 39, 0.14);
+}
+.section-label, .services-section-label, .contact-tag,
+.hero-eyebrow, .hero-subtitle, .hero-year, .hero-scroll,
+.stat-label, .service-number, .service-name, .service-desc,
+.services-desc, .footer-copy, .footer-made, .category-hero span {
+    color: var(--yellow);
+}
+.about-heading, .services-title, .contact-heading {
+    color: var(--yellow);
+}
+.about-heading em, .services-title em, .contact-heading em {
+    color: var(--bg);
+}
+
+/* Hero title stays inside the same max-width container as the rest of the page. */
+.hero-static-container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hero-static-title {
+    position: relative;
+    z-index: 3;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    color: var(--bg);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.5rem, 6vw, 6rem);
+    font-weight: 400;
+    line-height: 1.05;
+    text-align: left;
+    white-space: normal;
+}
+
+/* All section names exactly follow the navigation typography. */
+#about .section-label,
+#works .category-hero .section-label,
+#services .services-section-label,
+#contact .contact-tag {
+    display: block;
+    margin: 0 0 3rem;
+    color: var(--yellow);
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+/* Light footer, using the same background and accent. */
+footer {
+    background: var(--bg);
+    border-top: 1px solid var(--line);
+}
+.footer-copy, .footer-made {
+    color: var(--yellow);
+}
+
+@media (max-width: 768px) {
+    .hero-static-container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .hero-static-title {
+        padding: 0;
+        font-size: clamp(2rem, 9vw, 3.5rem);
+    }
+    #about .section-label,
+    #works .category-hero .section-label,
+    #services .services-section-label,
+    #contact .contact-tag {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
     }
 }
