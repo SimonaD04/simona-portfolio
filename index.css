@@ -46,10 +46,11 @@ h1,h2,h3,
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 5rem; 
+    padding: 0 5rem; /* Tvoj željeni veliki razmak sa strana */
     box-sizing: border-box;
 }
 
+/* Flex i Grid strukture za specifične sekcije unutar kontejnera */
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -82,7 +83,7 @@ h1,h2,h3,
     width: 100%;
 }
 
-
+/* Prilagođavanje za tablete i telefone */
 @media (max-width: 1024px) {
     .container { padding: 0 3rem; }
 }
@@ -150,15 +151,15 @@ nav .nav-burger span {
 .nav-logo {
     display: inline-flex;
     align-items: center;
-    text-decoration: none; 
+    text-decoration: none; /* Uklanja podvlačenje ako ima teksta */
 }
 
 
 .nav-logo img {
-    height: 120px;      
-    width: auto;       
-    display: block;    
-    transition: transform 0.3s ease; 
+    height: 120px;      /* Podešava visinu logotipa (standard je između 40px i 60px) */
+    width: auto;       /* Automatski prilagođava širinu da se slika ne bi deformisala */
+    display: block;    /* Uklanja prazan prostor ispod slike */
+    transition: transform 0.3s ease; /* Blaga animacija za hover efekat */
 }
 .nav-links {
   display: flex;
@@ -519,24 +520,25 @@ nav .nav-burger span {
     font-size:.75rem;
     letter-spacing:.05em;
 }
-
+/* Kontejner za video projekat */
 .project-video-container {
     display: grid;
-    grid-template-columns: 1.4fr 1fr; 
+    grid-template-columns: 1.4fr 1fr; /* Prati tvoju strukturu: tekst zauzima više mesta, dugmad manje */
+    gap: 4rem;
     align-items: flex-start;
     padding-top: 2rem;
 }
 
-
+/* Desna kolona sa dugmadima */
 .project-buttons {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; 
+    gap: 1.5rem; /* Razmak između dva dugmeta */
     justify-content: center;
     height: 100%;
 }
 
-
+/* Stil za pojedinačno dugme */
 .instagram-btn {
     display: block;
     text-align: center;
@@ -556,7 +558,7 @@ nav .nav-burger span {
     color: #f7f6f2;
 }
 
-
+/* Prilagođavanje za mobilne telefone */
 @media (max-width: 768px) {
     .project-video-container {
         grid-template-columns: 1fr;
@@ -841,25 +843,27 @@ footer {
     width: 30px;
     height: 20px;
     padding: 0;
-    z-index: 1001; 
+    z-index: 1001; /* Mora biti iznad menija */
 }
 
 .nav-burger span {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: #86735f; 
+    background-color: #86735f; /* Boja linija burgera (prilagodi svojoj) */
     transition: all 0.3s ease;
     transform-origin: left center;
 }
 
-
+/* --- EKSTREMNI STILOVI ZA MOBILNE (max-width: 768px) --- */
 @media (max-width: 768px) {
     
+    /* 1. Prikazujemo burger dugme na telefonu */
     .nav-burger {
         display: flex;
     }
 
+    /* ANIMACIJA BURGERA U "X" KADA SE OTRENI MENI (Klasa .open) */
     .nav-burger.open span:nth-child(1) {
         transform: rotate(45deg);
         position: relative;
@@ -877,13 +881,14 @@ footer {
         top: 2px;
     }
 
+    /* 2. Skriveni meni na mobilnom koji se otvara preko celog ekrana */
     .nav-links {
         position: fixed;
         top: 0;
-        right: -100%; 
+        right: -100%; /* Inicijalno je sklonjen skroz desno van ekrana */
         width: 100%;
         height: 100vh;
-        background-color: #f7f6f2; 
+        background-color: #f7f6f2; /* Tvoja tačna boja pozadine, bez providnosti */
     opacity: 1;
         display: flex;
         flex-direction: column;
@@ -893,18 +898,19 @@ footer {
         padding: 0;
         margin: 0;
         list-style: none;
-        transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1); 
+        transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1); /* Elegantno klizanje */
         z-index: 1000;
     }
 
-
+    /* Kad JS doda klasu .open, meni uklizava na ekran */
     .nav-links.open {
         right: 0;
         background-color: #f7f6f2; 
     }
 
+    /* Stilovi za linkove unutar mobilnog menija */
     .nav-links li a {
-        font-size: 2rem; 
+        font-size: 2rem; /* Velika, elegantna slova na mobilnom */
         text-decoration: none;
         color: #86735f;
         transition: opacity 0.3s ease;
@@ -916,7 +922,7 @@ footer {
 }
 @media (max-width: 1024px) {
     .container {
-        padding: 0 3rem; 
+        padding: 0 3rem; /* Smanjujemo bočne razmake sa 5rem na 3rem */
     }
 
     .project-list {
@@ -925,7 +931,7 @@ footer {
 
     .project, 
     .project-video-container {
-        gap: 3rem; 
+        gap: 3rem; /* Smanjuje razmak između slika i tekstova */
     }
     .category-hero {
         padding: 3rem 1rem;
@@ -933,18 +939,19 @@ footer {
     }
 }
 
-
+/* --- TELEFONI (max-width: 768px) --- */
 @media (max-width: 768px) {
-
+    /* 1. Opšti kontejner */
     .container {
-        padding: 0 1.5rem; 
+        padding: 0 1.5rem; /* Standardni mobilni razmak sa strana */
     }
 
-
+    /* 2. Navigacija (Ako se linkovi ne kriju iza burgera, ređaju se u kolonu) */
     .nav-links {
         gap: 1.5rem;
     }
 
+    /* 3. Hero Sekcija */
     #hero {
         padding: 4rem 0;
     }
@@ -955,32 +962,32 @@ footer {
         font-size: 1rem;
     }
 
-
+    /* 4. About Sekcija */
     .about-container {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr; /* Tekst ide ispod naslova */
         gap: 2rem;
     }
     .about-heading {
-        font-size: 2.2rem; 
+        font-size: 2.2rem; /* Smanjujemo veličinu glavnog naslova */
         line-height: 1.2;
     }
     .about-stats {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr; /* Statistiika ide jedno ispod drugog */
         gap: 1.5rem;
         margin-top: 2rem;
     }
 
-
+    /* 5. Mreža Projekata (Works) */
     .category-hero h1 {
         font-size: 1.8rem;
     }
 
     .project {
-        grid-template-columns: 1fr !important; 
+        grid-template-columns: 1fr !important; /* Ukida se levo/desno, sve ide u jednu kolonu */
         gap: 1.5rem;
     }
 
-    
+    /* Poništavamo cik-cak poređane projekte (nth-child(even)) da na telefonu svi izgledaju isto */
     .project:nth-child(even) {
         grid-template-columns: 1fr !important;
     }
@@ -994,9 +1001,9 @@ footer {
         font-size: 1.8rem;
     }
 
-    
+    /* 6. Video Sekcija specifično */
     .project-video-container {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr; /* Dugmad idu ispod teksta */
         gap: 2rem;
     }
     .project-buttons {
@@ -1011,15 +1018,16 @@ footer {
         font-size: 2.5rem;
     }
     .services-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr; /* Kartice usluga idu jedna ispod druge */
         gap: 1.5rem;
     }
     .service-card {
         padding: 2rem;
     }
 
+    /* 8. Kontakt (Contact) */
     .contact-container {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr; /* Kontakt informacije idu ispod naslova */
         gap: 2.5rem;
     }
     .contact-heading {
@@ -1028,7 +1036,7 @@ footer {
 
     /* 9. Footer */
     .footer-container {
-        flex-direction: column; 
+        flex-direction: column; /* Autorska prava i tvoje ime idu jedno ispod drugog */
         gap: 1rem;
         text-align: center;
         padding: 2rem 1.5rem;
@@ -1151,6 +1159,9 @@ footer {
     }
 }
 
+/* =====================================
+   TYPOGRAPHY — minimal overrides
+===================================== */
 
 body {
     font-family: "Poppins", sans-serif;
@@ -1166,7 +1177,7 @@ h1, h2, h3,
     font-family: "Playfair Display", serif;
 }
 
-
+/* Match Latest Projects and My Services to the About heading */
 .category-hero h1,
 .services-title {
     font-family: "Playfair Display", serif;
@@ -1175,7 +1186,7 @@ h1, h2, h3,
     line-height: 1.1;
 }
 
-
+/* Poppins for navigation and supporting text */
 .nav-links a,
 .section-label,
 .section-label *,
@@ -1191,7 +1202,7 @@ h1, h2, h3,
     font-family: "Poppins", sans-serif;
 }
 
-
+/* Footer — restrained dark closing section */
 footer {
     background: #0a0908;
     border-top: 1px solid rgba(234, 224, 213, 0.2);
@@ -1225,5 +1236,100 @@ footer {
         flex-direction: column;
         gap: 0.8rem;
         text-align: center;
+    }
+}
+
+
+/* =====================================
+   FINAL REQUESTED ADJUSTMENTS
+===================================== */
+
+/* Static hero text: no marquee, no movement */
+.hero-static-title {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding: 0 3rem;
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.5rem, 6vw, 6rem);
+    font-weight: 400;
+    line-height: 1.05;
+    text-align: left;
+}
+
+/* All section labels use the same small style as the navigation */
+#about .section-label,
+.category-hero .section-label,
+.services-section-label,
+#contact .contact-tag {
+    display: block;
+    margin: 0 0 3rem;
+    color: #c6ac8f;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.category-hero {
+    padding: 4rem 1rem;
+    display: block;
+}
+
+.category-hero .section-label {
+    margin-bottom: 0;
+}
+
+.services-header {
+    display: block;
+    margin-bottom: 5rem;
+}
+
+.services-section-label {
+    color: #c6ac8f;
+    margin-bottom: 2rem;
+}
+
+/* Keep the small section-heading style on mobile too */
+@media (max-width: 768px) {
+    .hero-static-title {
+        padding: 0 1.5rem;
+        font-size: clamp(2rem, 9vw, 3.5rem);
+    }
+
+    #about .section-label,
+    .category-hero .section-label,
+    .services-section-label,
+    #contact .contact-tag {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Light footer, matching the original light background */
+footer {
+    background: var(--bg);
+    border-top: 1px solid rgba(26, 24, 20, 0.12);
+    margin: 0 3rem;
+    padding: 2.5rem 0;
+}
+
+.footer-copy,
+.footer-made {
+    color: #8c7357;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    footer {
+        margin: 0 1.5rem;
+        padding: 2rem 0;
     }
 }
