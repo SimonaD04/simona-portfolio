@@ -96,6 +96,7 @@ h1,h2,h3,
     .container { padding: 0 1.5rem; }
     .about-container, .contact-container { grid-template-columns: 1fr; gap: 2rem; }
 }
+
 .nav-burger {
   display: none;
   flex-direction: column;
@@ -1526,5 +1527,10 @@ footer {
         padding-right: 1.5rem;
         margin-bottom: 8vh;
     }
+  .project-list{
+  padding: 1rem;}
+  .category-hero{
+    padding: 1rem;
+  }
 }
 
