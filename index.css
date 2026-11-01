@@ -1457,22 +1457,30 @@ footer {
    LATEST FIXES — HERO ALIGNMENT + ACCENT LINES
 ===================================== */
 
-/* Keep the hero heading inside the page container,
-   anchored to the lower part of the hero section. */
+/* =====================================
+   HERO ALIGNMENT + ACCENT LINES
+===================================== */
+
 #hero {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
+/* Hero title aligned with the main page container */
 #hero .hero-static-container {
-    position: absolute;
-    left: 50%;
-    bottom: clamp(3rem, 10vh, 7rem);
-    transform: translateX(-50%);
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+
     width: 100%;
     max-width: 1400px;
-    margin: 0;
+    margin: auto auto clamp(3rem, 10vh, 7rem);
+
     padding: 0 5rem;
     box-sizing: border-box;
+
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
@@ -1489,18 +1497,18 @@ footer {
     line-height: 1.05;
 }
 
-/* The italic word should use the light background colour. */
+/* About heading */
 #about .about-heading em {
-    color: var(--bg) !important;
+    color: var(--bg);
 }
 
-/* Accent-coloured rules under phone/email and above the footer. */
+/* Accent-coloured lines */
 #contact .contact-item {
-    border-bottom: 1px solid var(--accent) !important;
+    border-bottom: 1px solid var(--accent);
 }
 
 footer {
-    border-top: 1px solid var(--accent) !important;
+    border-top: 1px solid var(--accent);
 }
 
 @media (max-width: 1024px) {
@@ -1514,6 +1522,7 @@ footer {
     #hero .hero-static-container {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
-        bottom: 8vh;
+        margin-bottom: 8vh;
     }
 }
+
