@@ -7,7 +7,7 @@
 }
  :root {
     --bg: #f8f7f4;
-    --anthracite: #292a27;
+    --anthracite: #0f0f0e;
     --yellow: #c6ac8f;
 
     /* Existing variable names kept as aliases so the original layout keeps working */
@@ -1346,7 +1346,7 @@ footer {
 
 :root {
     --bg: #f8f7f4;
-    --anthracite: #292a27;
+    --anthracite: #0f0f0e;
     --yellow: #c6ac8f;
     --text: var(--anthracite);
     --muted: var(--anthracite);
@@ -1506,7 +1506,9 @@ footer {
 #contact .contact-item {
     border-bottom: 1px solid var(--accent);
 }
-
+.contact-heading em{
+  color: var(--anthracite);
+}
 footer {
     border-top: 1px solid var(--accent);
 }
