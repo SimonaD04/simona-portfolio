@@ -1156,6 +1156,7 @@ footer {
 }@media (max-width: 480px) {
     .project img {
       height: auto;
+      width: 100%;
     }
     
     .instagram-btn {
