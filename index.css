@@ -7,7 +7,7 @@
 }
  :root {
     --bg: #f8f7f4;
-    --anthracite: #212426;
+    --anthracite: c;
     --yellow: #c6ac8f;
 
     --text: var(--anthracite);
@@ -517,7 +517,7 @@ nav .nav-burger span {
     font-weight:300;
     margin-bottom:1rem;
 }
-.project h2 a{color: var(--anthracite) ; text-decoration: none;}
+.project h2 a{color: var(--antracite) ; text-decoration: none;}
 .project p{
     color:var(--muted);
     line-height:1.8;
@@ -725,7 +725,7 @@ nav .nav-burger span {
 }
 .contact-heading em {
   font-style: italic;
-  color: var(--accent);
+  color: var(--anthracite);
   font-weight: 300;
 
 }
@@ -1377,7 +1377,7 @@ body {
     color: var(--accent);
 }
 .about-heading em, .services-title em, .contact-heading em {
-    color: var(--bg);
+    color: var(--anthracite);
 }
 
 /* Hero title stays inside the same max-width container as the rest of the page. */
