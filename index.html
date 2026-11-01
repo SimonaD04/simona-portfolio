@@ -41,9 +41,7 @@
     <div class="overlay"></div>
 
 
-    <div class="hero-marquee-wrap">
-        <div class="hero-marquee-track" id="track1"></div>
-    </div>
+    <div class="hero-static-title">Graphic and web design</div>
 </section>
 
   <div class="section-divider"></div>
@@ -85,7 +83,7 @@
   <section id="works">
     <div class="container">
       <div class="category-hero">
-          <h1>My latest projects</h1>
+          <p class="section-label">Latest projects</p>
       </div>
 
      <div class="project-list">
@@ -236,7 +234,7 @@
   <section id="services">
     <div class="container">
       <div class="services-header">
-        <h2 class="services-title reveal">My<br><em>Services</em></h2>
+        <p class="section-label services-section-label reveal">My services</p>
         <p class="services-desc reveal reveal-delay-1">Design that tells your story — on screen and on paper.</p>
       </div>
       <div class="services-grid reveal reveal-delay-2">
@@ -261,7 +259,7 @@
   <section id="contact">
     <div class="container contact-container">
       <div class="contact-left reveal">
-        <p class="contact-tag">Contact</p>
+        <p class="section-label contact-tag">Contact</p>
         <h2 class="contact-heading">Let's<br><em>work</em><br>together.</h2>
       </div>
       <div class="contact-right">
@@ -280,7 +278,7 @@
   <footer>
     <div class="container footer-container">
       <span class="footer-copy">© 2025 SIMONA ĐURIĆ</span>
-      <span class="footer-made">Design &amp; Development</span>
+      <span class="footer-made">Graphic and web design</span>
     </div>
   </footer>
 
@@ -299,39 +297,6 @@
         navLinks.classList.remove('open')
       })
     })
-
-    const FIRST = 'SIMONA';
-    const LAST  = 'Đ';
-
-    function buildItem() {
-      return `<span class="hero-marquee-item">${FIRST}&nbsp;<em>${LAST}</em></span>`;
-    }
-
-    function fillTrack(el) {
-      let html = '';
-      for (let i = 0; i < 8; i++) html += buildItem();
-      el.innerHTML = html + html;
-    }
-
-    const track1 = document.getElementById('track1');
-    fillTrack(track1);
-
-    let pos1 = 0;
-    let speed = 0.5;
-    let paused = false;
-
-    document.querySelector('.hero-marquee-wrap').addEventListener('mouseenter', () => paused = true);
-    document.querySelector('.hero-marquee-wrap').addEventListener('mouseleave', () => paused = false);
-
-    function tickMarquee() {
-      speed += ((paused ? 0.15 : 0.5) - speed) * 0.06;
-      const w1 = track1.scrollWidth / 2;
-      pos1 -= speed;
-      if (Math.abs(pos1) >= w1) pos1 = 0;
-      track1.style.transform = `translateX(${pos1}px)`;
-      requestAnimationFrame(tickMarquee);
-    }
-    tickMarquee();
 
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver(entries => {
