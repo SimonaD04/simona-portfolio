@@ -7,7 +7,7 @@
 }
  :root {
     --bg: #f8f7f4;
-    --anthracite: c;
+    --anthracite:#292a27;
     --yellow: #c6ac8f;
 
     --text: var(--anthracite);
@@ -517,7 +517,7 @@ nav .nav-burger span {
     font-weight:300;
     margin-bottom:1rem;
 }
-.project h2 a{color: var(--antracite) ; text-decoration: none;}
+.project h2 a{color: var(--anthracite) ; text-decoration: none;}
 .project p{
     color:var(--muted);
     line-height:1.8;
@@ -1424,7 +1424,7 @@ body {
 /* Light footer, using the same background and accent. */
 footer {
     background: var(--bg);
-    border-top: 1px solid var(--line);
+    border-top: 1px solid var(--anthracite);
 }
 .footer-copy, .footer-made {
     color: var(--accent);
@@ -1437,7 +1437,10 @@ footer {
     }
     .hero-static-title {
         padding: 0;
-        font-size: clamp(2rem, 9vw, 3.5rem);
+        font-size: 2.2rem;
+    }
+    .project img{
+      width:100%;
     }
     #about .section-label,
     #works .category-hero .section-label,
