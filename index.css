@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
-
-
 *,
 *::before,
 *::after {
@@ -49,11 +46,10 @@ h1,h2,h3,
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 5rem; /* Tvoj željeni veliki razmak sa strana */
+    padding: 0 5rem; 
     box-sizing: border-box;
 }
 
-/* Flex i Grid strukture za specifične sekcije unutar kontejnera */
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -86,7 +82,7 @@ h1,h2,h3,
     width: 100%;
 }
 
-/* Prilagođavanje za tablete i telefone */
+
 @media (max-width: 1024px) {
     .container { padding: 0 3rem; }
 }
@@ -154,15 +150,15 @@ nav .nav-burger span {
 .nav-logo {
     display: inline-flex;
     align-items: center;
-    text-decoration: none; /* Uklanja podvlačenje ako ima teksta */
+    text-decoration: none; 
 }
 
 
 .nav-logo img {
-    height: 120px;      /* Podešava visinu logotipa (standard je između 40px i 60px) */
-    width: auto;       /* Automatski prilagođava širinu da se slika ne bi deformisala */
-    display: block;    /* Uklanja prazan prostor ispod slike */
-    transition: transform 0.3s ease; /* Blaga animacija za hover efekat */
+    height: 120px;      
+    width: auto;       
+    display: block;    
+    transition: transform 0.3s ease; 
 }
 .nav-links {
   display: flex;
@@ -523,25 +519,24 @@ nav .nav-burger span {
     font-size:.75rem;
     letter-spacing:.05em;
 }
-/* Kontejner za video projekat */
+
 .project-video-container {
     display: grid;
-    grid-template-columns: 1.4fr 1fr; /* Prati tvoju strukturu: tekst zauzima više mesta, dugmad manje */
-    gap: 4rem;
+    grid-template-columns: 1.4fr 1fr; 
     align-items: flex-start;
     padding-top: 2rem;
 }
 
-/* Desna kolona sa dugmadima */
+
 .project-buttons {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* Razmak između dva dugmeta */
+    gap: 1.5rem; 
     justify-content: center;
     height: 100%;
 }
 
-/* Stil za pojedinačno dugme */
+
 .instagram-btn {
     display: block;
     text-align: center;
@@ -561,7 +556,7 @@ nav .nav-burger span {
     color: #f7f6f2;
 }
 
-/* Prilagođavanje za mobilne telefone */
+
 @media (max-width: 768px) {
     .project-video-container {
         grid-template-columns: 1fr;
@@ -846,27 +841,25 @@ footer {
     width: 30px;
     height: 20px;
     padding: 0;
-    z-index: 1001; /* Mora biti iznad menija */
+    z-index: 1001; 
 }
 
 .nav-burger span {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: #86735f; /* Boja linija burgera (prilagodi svojoj) */
+    background-color: #86735f; 
     transition: all 0.3s ease;
     transform-origin: left center;
 }
 
-/* --- EKSTREMNI STILOVI ZA MOBILNE (max-width: 768px) --- */
+
 @media (max-width: 768px) {
     
-    /* 1. Prikazujemo burger dugme na telefonu */
     .nav-burger {
         display: flex;
     }
 
-    /* ANIMACIJA BURGERA U "X" KADA SE OTRENI MENI (Klasa .open) */
     .nav-burger.open span:nth-child(1) {
         transform: rotate(45deg);
         position: relative;
@@ -884,14 +877,13 @@ footer {
         top: 2px;
     }
 
-    /* 2. Skriveni meni na mobilnom koji se otvara preko celog ekrana */
     .nav-links {
         position: fixed;
         top: 0;
-        right: -100%; /* Inicijalno je sklonjen skroz desno van ekrana */
+        right: -100%; 
         width: 100%;
         height: 100vh;
-        background-color: #f7f6f2; /* Tvoja tačna boja pozadine, bez providnosti */
+        background-color: #f7f6f2; 
     opacity: 1;
         display: flex;
         flex-direction: column;
@@ -901,19 +893,18 @@ footer {
         padding: 0;
         margin: 0;
         list-style: none;
-        transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1); /* Elegantno klizanje */
+        transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1); 
         z-index: 1000;
     }
 
-    /* Kad JS doda klasu .open, meni uklizava na ekran */
+
     .nav-links.open {
         right: 0;
         background-color: #f7f6f2; 
     }
 
-    /* Stilovi za linkove unutar mobilnog menija */
     .nav-links li a {
-        font-size: 2rem; /* Velika, elegantna slova na mobilnom */
+        font-size: 2rem; 
         text-decoration: none;
         color: #86735f;
         transition: opacity 0.3s ease;
@@ -925,7 +916,7 @@ footer {
 }
 @media (max-width: 1024px) {
     .container {
-        padding: 0 3rem; /* Smanjujemo bočne razmake sa 5rem na 3rem */
+        padding: 0 3rem; 
     }
 
     .project-list {
@@ -934,7 +925,7 @@ footer {
 
     .project, 
     .project-video-container {
-        gap: 3rem; /* Smanjuje razmak između slika i tekstova */
+        gap: 3rem; 
     }
     .category-hero {
         padding: 3rem 1rem;
@@ -942,19 +933,18 @@ footer {
     }
 }
 
-/* --- TELEFONI (max-width: 768px) --- */
+
 @media (max-width: 768px) {
-    /* 1. Opšti kontejner */
+
     .container {
-        padding: 0 1.5rem; /* Standardni mobilni razmak sa strana */
+        padding: 0 1.5rem; 
     }
 
-    /* 2. Navigacija (Ako se linkovi ne kriju iza burgera, ređaju se u kolonu) */
+
     .nav-links {
         gap: 1.5rem;
     }
 
-    /* 3. Hero Sekcija */
     #hero {
         padding: 4rem 0;
     }
@@ -965,32 +955,32 @@ footer {
         font-size: 1rem;
     }
 
-    /* 4. About Sekcija */
+
     .about-container {
-        grid-template-columns: 1fr; /* Tekst ide ispod naslova */
+        grid-template-columns: 1fr; 
         gap: 2rem;
     }
     .about-heading {
-        font-size: 2.2rem; /* Smanjujemo veličinu glavnog naslova */
+        font-size: 2.2rem; 
         line-height: 1.2;
     }
     .about-stats {
-        grid-template-columns: 1fr; /* Statistiika ide jedno ispod drugog */
+        grid-template-columns: 1fr; 
         gap: 1.5rem;
         margin-top: 2rem;
     }
 
-    /* 5. Mreža Projekata (Works) */
+
     .category-hero h1 {
         font-size: 1.8rem;
     }
 
     .project {
-        grid-template-columns: 1fr !important; /* Ukida se levo/desno, sve ide u jednu kolonu */
+        grid-template-columns: 1fr !important; 
         gap: 1.5rem;
     }
 
-    /* Poništavamo cik-cak poređane projekte (nth-child(even)) da na telefonu svi izgledaju isto */
+    
     .project:nth-child(even) {
         grid-template-columns: 1fr !important;
     }
@@ -1004,9 +994,9 @@ footer {
         font-size: 1.8rem;
     }
 
-    /* 6. Video Sekcija specifično */
+    
     .project-video-container {
-        grid-template-columns: 1fr; /* Dugmad idu ispod teksta */
+        grid-template-columns: 1fr; 
         gap: 2rem;
     }
     .project-buttons {
@@ -1021,16 +1011,15 @@ footer {
         font-size: 2.5rem;
     }
     .services-grid {
-        grid-template-columns: 1fr; /* Kartice usluga idu jedna ispod druge */
+        grid-template-columns: 1fr; 
         gap: 1.5rem;
     }
     .service-card {
         padding: 2rem;
     }
 
-    /* 8. Kontakt (Contact) */
     .contact-container {
-        grid-template-columns: 1fr; /* Kontakt informacije idu ispod naslova */
+        grid-template-columns: 1fr; 
         gap: 2.5rem;
     }
     .contact-heading {
@@ -1039,7 +1028,7 @@ footer {
 
     /* 9. Footer */
     .footer-container {
-        flex-direction: column; /* Autorska prava i tvoje ime idu jedno ispod drugog */
+        flex-direction: column; 
         gap: 1rem;
         text-align: center;
         padding: 2rem 1.5rem;
@@ -1159,5 +1148,82 @@ footer {
     .instagram-btn {
         padding: 1rem;
         font-size: 0.8rem;
+    }
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+h1, h2, h3,
+.about-heading,
+.services-title,
+.service-name,
+.contact-heading,
+.hero-marquee-item {
+    font-family: "Playfair Display", serif;
+}
+
+
+.category-hero h1,
+.services-title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.2rem, 4.5vw, 5rem);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+
+.nav-links a,
+.section-label,
+.section-label *,
+.section-label,
+.services-desc,
+.service-desc,
+.project p,
+.contact-tag,
+.contact-item-label,
+.contact-item-value,
+.footer-copy,
+.footer-made {
+    font-family: "Poppins", sans-serif;
+}
+
+
+footer {
+    background: #0a0908;
+    border-top: 1px solid rgba(234, 224, 213, 0.2);
+    margin: 0;
+    padding: 2.5rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-copy,
+.footer-made {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    color: #c6ac8f;
+}
+
+.footer-made em {
+    font-family: "Playfair Display", serif;
+    font-size: 1rem;
+    font-style: italic;
+    color: #eae0d5;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 2rem 1.5rem;
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
     }
 }
