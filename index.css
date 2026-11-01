@@ -7,7 +7,7 @@
 }
  :root {
     --bg: #f8f7f4;
-    --anthracite: #1F2326;
+    --anthracite: #212426;
     --yellow: #c6ac8f;
 
     --text: var(--anthracite);
@@ -517,7 +517,7 @@ nav .nav-burger span {
     font-weight:300;
     margin-bottom:1rem;
 }
-.project h2 a{color: var(--antracite) ; text-decoration: none;}
+.project h2 a{color: var(--anthracite) ; text-decoration: none;}
 .project p{
     color:var(--muted);
     line-height:1.8;
