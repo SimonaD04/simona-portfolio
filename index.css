@@ -7,13 +7,13 @@
 }
  :root {
     --bg: #f8f7f4;
-    --anthracite:#292a27;
+    --anthracite: #171717;
     --yellow: #c6ac8f;
 
     --text: var(--anthracite);
     --muted: var(--anthracite);
     --accent: var(--yellow);
-    --line: rgba(41, 42, 39, 0.14);
+    --line: rgba(23, 23, 23, 0.14);
 }
 
 html {
@@ -1260,6 +1260,8 @@ footer {
     font-weight: 400;
     line-height: 1.05;
     text-align: left;
+    padding-top: 330px;
+
 }
 
 /* All section labels use the same small style as the navigation */
@@ -1342,7 +1344,7 @@ footer {
 
 :root {
     --bg: #f8f7f4;
-    --anthracite: #292a27;
+    --anthracite: #171717;
     --yellow: #c6ac8f;
     --text: var(--anthracite);
     --muted: var(--anthracite);
