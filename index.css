@@ -1549,13 +1549,17 @@ footer {
 }
 
 .nav-burger.open span:nth-child(1) {
-    top: 9px;
-    transform: rotate(45deg);
+    top: 9px !important;
+    transform: rotate(45deg) !important;
+    transform-origin: center;
 }
 
 .nav-burger.open span:nth-child(2) {
-    top: 9px;
-    transform: rotate(-45deg);
+    top: 9px !important;
+    transform: rotate(-45deg) !important;
+    transform-origin: center;
+    opacity: 1 !important;
+    width: 28px !important;
 }
 }
 
