@@ -98,42 +98,35 @@ h1,h2,h3,
 }
 
 .nav-burger {
-    width: 28px;
-    height: 20px;
-    position: relative;
-    display: block;
-    padding: 0;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    z-index: 1001;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: none;
+  padding: 0;
+  z-index: 101;
 }
 
 .nav-burger span {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 1.5px;
-    background-color: #c6ac8f;
-    transition: top 0.35s ease, transform 0.35s ease;
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: #292a27;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
-.nav-burger span:first-child {
-    top: 4px;
+.nav-burger.open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
 }
 
-.nav-burger span:last-child {
-    top: 14px;
+.nav-burger.open span:nth-child(2) {
+  opacity: 0;
 }
 
-.nav-burger.open span:first-child {
-    top: 9px;
-    transform: rotate(45deg);
-}
-
-.nav-burger.open span:last-child {
-    top: 9px;
-    transform: rotate(-45deg);
+.nav-burger.open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
 }
 nav {
   position: fixed;
@@ -845,6 +838,53 @@ footer {
 .reveal-delay-3 {
   transition-delay: 0.45s;
 }
+.nav-burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    padding: 0;
+    z-index: 1001; /* Mora biti iznad menija */
+}
+
+.nav-burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #c6ac8f; /* Boja linija burgera (prilagodi svojoj) */
+    transition: all 0.3s ease;
+    transform-origin: left center;
+}
+
+/* --- EKSTREMNI STILOVI ZA MOBILNE (max-width: 768px) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Prikazujemo burger dugme na telefonu */
+    .nav-burger {
+        display: flex;
+    }
+
+    /* ANIMACIJA BURGERA U "X" KADA SE OTRENI MENI (Klasa .open) */
+    .nav-burger.open span:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: -2px;
+    }
+
+    .nav-burger.open span:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+    }
+
+    .nav-burger.open span:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: 2px;
+    }
 
     /* 2. Skriveni meni na mobilnom koji se otvara preko celog ekrana */
     .nav-links {
@@ -1428,7 +1468,6 @@ footer {
     flex-direction: column;
     justify-content: flex-end;
 }
-
 .project-video {
     display: block;
     width: 100%;
@@ -1511,41 +1550,5 @@ footer {
   .contact-item-value {
     font-size: 1rem;
 }
-    .nav-burger {
-        display: block;
-    }
-  .nav-burger span {
-    display: block !important;
-    position: absolute;
-    left: 0;
-    width: 28px !important;
-    height: 2px !important;
-    opacity: 1 !important;
-    background-color: #c6ac8f;
-    transition: top 0.35s ease, transform 0.35s ease;
-}
-
-.nav-burger span:nth-child(1) {
-    top: 4px;
-}
-
-.nav-burger span:nth-child(2) {
-    top: 14px;
-}
-
-.nav-burger.open span:nth-child(1) {
-    top: 9px !important;
-    transform: rotate(45deg) !important;
-    transform-origin: center;
-}
-
-.nav-burger.open span:nth-child(2) {
-    top: 9px !important;
-    transform: rotate(-45deg) !important;
-    transform-origin: center;
-    opacity: 1 !important;
-    width: 28px !important;
 }
 }
-}
-
