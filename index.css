@@ -251,42 +251,6 @@ nav .nav-burger span {
   animation: fadeUp 1s 0.4s forwards;
 }
 
-.hero-marquee-wrap {
-  width: 100%;
-  overflow: hidden;
-  border-top: 1px solid rgba(41, 42, 39, 0.14);
-  border-bottom: 1px solid rgba(41, 42, 39, 0.14);
-  padding: 0.4rem 0;
-  opacity: 0;
-  animation: fadeIn 1s 0.3s forwards;
-  position: relative;
-  z-index: 3;
-  margin-top: auto;
-}
-
-.hero-marquee-track {
-  display: flex;
-  white-space: nowrap;
-  will-change: transform;
-}
-
-.hero-marquee-item {
-  font-size:clamp(5rem,13vw,11rem);
-  font-weight:400;
-  line-height:.9;
-  letter-spacing: -0.01em;
-  color: #292a27;
-  padding-right: 0.5em;
-  flex-shrink: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-.hero-marquee-item em {
-  font-style: italic;
-  color: #c6ac8f;
-  font-weight: 200;
-}
 
 .hero-subtitle {
   font-size: 0.65rem;
@@ -324,23 +288,6 @@ nav .nav-burger span {
   animation: extendLine 1.5s 1.4s forwards;
   transform-origin: left;
   transform: scaleX(0);
-}
-.hero-eyebrow,
-.hero-subtitle,
-.hero-year,
-.hero-marquee-item{
-    color:#f8f7f4;
-}
-.hero-year {
-  position: absolute;
-  top: 50%;
-  right: 3rem;
-  transform: translateY(-50%) rotate(90deg);
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-  color: #c6ac8f;
-  opacity: 0.4;
-  z-index: 3;
 }
 
 .section-divider {
@@ -533,7 +480,14 @@ nav .nav-burger span {
     align-items: flex-start;
     padding-top: 2rem;
 }
-
+.project-video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: #292a27;
+}
 /* Desna kolona sa dugmadima */
 .project-buttons {
     display: flex;
@@ -1535,4 +1489,37 @@ footer {
   .contact-item-value{
     font-size:1rem;
   }
+  /* Responsive video */
+.project-video-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.project-video-container > * {
+    min-width: 0;
+}
+
+.project-video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+}
+    .project-video-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        gap: 1.5rem;
+    }
+
+    .project-video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
 }
