@@ -1532,4 +1532,7 @@ footer {
   .category-hero{
     padding: 1rem;
   }
+  .contact-item-value{
+    font-size:1rem;
+  }
 }
