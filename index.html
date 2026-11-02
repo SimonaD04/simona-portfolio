@@ -269,26 +269,22 @@
   </footer>
 
   <script>
-    const burger = document.getElementById('navBurger')
-    const navLinks = document.getElementById('navLinks')
+<script>
+ const burger = document.getElementById('navBurger');
+const navLinks = document.getElementById('navLinks');
 
-    burger.addEventListener('click', () => {
-      burger.classList.toggle('open')
-      navLinks.classList.toggle('open')
-    })
+burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+});
 
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        burger.classList.remove('open')
-        navLinks.classList.remove('open')
-      })
-    })
-
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-    reveals.forEach(el => observer.observe(el));
+// Automatski zatvara meni kada klikneš na bilo koji link (korisno za mobilni)
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        burger.classList.remove('open');
+        navLinks.classList.remove('open');
+    });
+});
   </script>
 </body>
 </html>
