@@ -1511,25 +1511,13 @@ footer {
   .contact-item-value {
     font-size: 1rem;
 }
-}.nav-burger {
-    display: none;
-    width: 28px;
-    height: 20px;
-    position: relative;
-    padding: 0;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    z-index: 1001;
 }
 
 @media (max-width: 768px) {
     .nav-burger {
         display: block;
     }
-}
-
-.nav-burger span {
+  .nav-burger span {
     display: block !important;
     position: absolute;
     left: 0;
@@ -1560,6 +1548,7 @@ footer {
     transform-origin: center;
     opacity: 1 !important;
     width: 28px !important;
+}
 }
 }
 
