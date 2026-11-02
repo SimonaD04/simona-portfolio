@@ -1468,6 +1468,13 @@ footer {
     flex-direction: column;
     justify-content: flex-end;
 }
+.project-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: #292a27;
+}
 
 /* Hero title aligned with the main page container */
 #hero .hero-static-container {
