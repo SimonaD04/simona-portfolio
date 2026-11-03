@@ -42,8 +42,7 @@ h1,h2,h3,
 .about-heading,
 .services-title,
 .service-name,
-.contact-heading,
-.hero-marquee-item{
+.contact-heading{
     font-family:"Cormorant Garamond",serif;
 }
 .container {
@@ -176,7 +175,7 @@ nav .nav-burger span {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--bg);
+  color: var(--accent);
   opacity: 0.6;
   transition: opacity 0.3s;
 }
@@ -223,14 +222,6 @@ nav .nav-burger span {
     height: auto;
 }
 
-.hero-top,
-.hero-marquee-wrap,
-.hero-subtitle,
-.hero-year{
-    position:relative;
-    z-index:3;
-}
-
 .hero-top {
   flex: 1;
   display: flex;
@@ -239,29 +230,7 @@ nav .nav-burger span {
   padding: 0 3rem 2rem;
   position: relative;
   z-index: 3;
-}
 
-.hero-eyebrow {
-  font-size: 1.5rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #c6ac8f;
-  margin-bottom: 1.5rem;
-  opacity: 0;
-  animation: fadeUp 1s 0.4s forwards;
-}
-
-
-.hero-subtitle {
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #c6ac8f;
-  opacity: 0;
-  animation: fadeUp 1s 0.6s forwards;
-  padding: 2rem 3rem 2.5rem;
-  position: relative;
-  z-index: 3;
 }
 
 .hero-scroll {
@@ -1396,7 +1365,6 @@ footer {
     }
     .hero-static-title {
         padding: 0;
-        font-size: clamp(2rem, 9vw, 3.5rem);
     }
     #about .section-label,
     #works .category-hero .section-label,
