@@ -1520,6 +1520,25 @@ footer {
         width: 100%;
         max-width: 100%;
         height: auto;
-    }
+    }.project {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+}
+
+.project img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    justify-self: stretch;
+}
+
+.project:nth-child(even) {
+    grid-template-columns: 1fr !important;
+}
+
+.project:nth-child(even) img {
+    order: 0;
+    width: 100%;
+}
 }
 }
